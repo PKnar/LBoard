@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/api/students", studentsRoute);
 
 app.get("/", (req, res) => {
-  res.json({ message: "Server is running" });
+  res.json({ message: "Server is active" });
 });
 
 app.listen(PORT, () => {
