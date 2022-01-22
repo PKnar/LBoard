@@ -11,7 +11,7 @@ const Info = () => {
         <span>Stack: </span> React, Node, MongoDB
       </p>
       <p>
-        <span>Github Link: </span>Knarik Poghosyan
+        <span>Github Link: </span>https://github.com/PKnar/LBoard
       </p>
     </div>
   );
