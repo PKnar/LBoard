@@ -6,7 +6,7 @@ import Home from "./components/home/Home";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ModifyPage from "./components/modifyPage/ModifyPage";
-import Student from "./student/Student";
+import Student from "./components/student/Student";
 import Info from "./components/info/Info";
 
 function App() {
