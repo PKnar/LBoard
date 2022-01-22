@@ -8,7 +8,6 @@ connectDatabase();
 
 const importData = async () => {
   try {
-    //deleting default data first
     await StudentModel.deleteMany();
     await StudentModel.insertMany(students);
     console.log("Data Imported ");

@@ -18,6 +18,7 @@ const getStudents = async (req, res) => {
 //@access public
 
 const getStudentById = async (req, res) => {
+  console.log(req.params);
   try {
     const student = await StudentModel.findById(req.params.id);
     if (student) {
@@ -37,7 +38,8 @@ const getStudentById = async (req, res) => {
 
 const addNewStudent = async (req, res) => {
   try {
-    const { name, points, image } = req.body;
+    let { name, points, image } = req.body;
+    name = name.charAt(0).toUpperCase() + name.substr(1);
 
     const studentExists = await StudentModel.findOne({ name });
 
@@ -63,31 +65,38 @@ const addNewStudent = async (req, res) => {
 
 const updateStudent = async (req, res) => {
   try {
-    const { name, points } = req.body;
-    console.log(req.body);
-    const student = await StudentModel.findById(req.body._id);
+    let { name, points, image } = req.body;
+    name = name.charAt(0).toUpperCase() + name.substr(1);
+
+    const student = await StudentModel.findById(req.params.id);
 
     if (student) {
       student.name = name || student.name;
       student.points = points || student.points;
+      image;
+
+      const updatedStudent = await student.save();
+      res.status(200).json(updatedStudent);
+    } else {
+      res.status(500).json("Error: Data update failed");
     }
-
-    const updatedStudent = await student.save();
-
-    res.json(updatedStudent);
   } catch (error) {
     console.log(error);
   }
 };
 
+//@desc delete student
+//@route delete /api/students/delete
+//@access public
+
 const deleteStudent = async (req, res) => {
   try {
-    const student = await StudentModel.findById(req.body._id);
+    const student = await StudentModel.findById(req.params.id);
 
     if (student) {
       StudentModel.findByIdAndRemove(
-        req.body._id,
-        req.body,
+        req.params.id,
+        student,
         function (err, data) {
           if (!err) {
             console.log("Deleted");
