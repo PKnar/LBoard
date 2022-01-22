@@ -1,0 +1,21 @@
+:root {
+  --dashboardBg: #1f1134;
+  --homeBg: #f7f7f7;
+  --cardBg: rgba(255, 255, 255, 255);
+}
+
+.App {
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

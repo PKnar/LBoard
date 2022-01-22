@@ -1,0 +1,11 @@
+.info-page {
+  padding: 6rem 5rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+.info-page p {
+  margin-bottom: 1rem;
+}

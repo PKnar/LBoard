@@ -1,0 +1,171 @@
+.modify-page {
+  width: 100%;
+  padding: 3rem;
+}
+
+.modify-page .leaderboard {
+  width: 100%;
+}
+
+.leaderboard,
+.filters {
+  border-radius: 0 !important;
+}
+
+table img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 1rem 0 0 0;
+  background-color: var(--cardBg);
+}
+
+.filters input {
+  width: 100%;
+  padding-left: 1rem;
+  border: none;
+  padding: 1rem;
+}
+
+.filters input:focus {
+  outline: none;
+}
+
+.search-icon {
+  margin-right: 1rem;
+}
+
+.add {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--dashboardBg);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+.modal-wrapper {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.829);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scale 1s linear forwards;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  max-width: 500px;
+}
+
+form h3 {
+  color: white;
+  text-align: center;
+}
+
+form input {
+  padding: 1rem;
+}
+
+.error-message {
+  margin: 1rem 0.5rem;
+  color: red;
+  font-size: 13px;
+}
+
+form input,
+.modify-page button {
+  margin: 0.5rem;
+}
+
+.btn,
+.success {
+  background-color: var(--dashboardBg);
+  padding: 1rem;
+  color: white;
+  border: none;
+}
+
+.cancel {
+  background-color: transparent;
+  border: 2px solid var(--cardBg);
+  color: var(--cardBg);
+  padding: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button {
+  padding: 0.5rem;
+}
+
+.buttons .cancel {
+  border-color: var(--dashboardBg);
+  color: var(--dashboardBg);
+}
+
+table input {
+  width: 80%;
+  padding: 0.5rem;
+}
+
+.success {
+  display: none;
+  background-color: rgba(7, 211, 7, 0.575);
+  opacity: 0;
+  animation: fadeIn 0.5s linear forwards;
+  transition: all 1s;
+}
+
+.show {
+  display: block;
+  transition: all 1s;
+}
+
+@keyframes scale {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

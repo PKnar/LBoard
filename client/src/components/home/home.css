@@ -1,0 +1,170 @@
+main {
+  padding: 3rem 4rem 0 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--homeBg);
+}
+
+h3 {
+  margin: 1rem 0;
+}
+
+thead td {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+tbody td {
+  padding: 1rem;
+}
+
+.loader {
+  align-self: center;
+  position: relative;
+  top: 30%;
+}
+
+.leaderboard {
+  width: 60%;
+  height: 500px;
+  margin-top: 3rem;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  border-radius: 1rem 0 0 1rem;
+}
+
+td {
+  font-size: 13px;
+}
+
+table {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  min-height: 100px;
+  background-color: var(--cardBg);
+}
+tbody tr {
+  padding: 2rem;
+  background-color: rgb(250, 250, 250);
+}
+
+table .img-wrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.student {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 30%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.total-wrapper {
+  background-color: var(--cardBg);
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 4rem 1rem 4rem;
+  box-shadow: -1px 5px 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+.students {
+  margin: 3rem 4rem 1rem 4rem;
+  background-color: var(--dashboardBg);
+  color: white;
+}
+
+.total-wrapper p:nth-child(2) {
+  border-right: 4px solid var(--dashboardBg);
+  border-bottom: 4px solid var(--dashboardBg);
+  padding: 1rem;
+  border-radius: 100%;
+  margin: 2rem 3rem;
+  display: block;
+}
+
+.students p:nth-child(2) {
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 1rem 0 0 0;
+  background-color: var(--cardBg);
+}
+
+.filters button {
+  border: none;
+  background-color: transparent;
+  border-left: 1px solid rgb(228, 228, 228);
+  padding: 1rem 2rem;
+  display: flex;
+  cursor: pointer;
+}
+
+.filters img {
+  width: 20px;
+  margin-left: 1rem;
+}
+
+.filters input {
+  width: 100%;
+  padding-left: 1rem;
+  border: none;
+}
+
+.filters input:focus {
+  outline: none;
+}
+
+.search-icon {
+  margin-right: 1rem;
+}
+
+@media (max-width: 900px) {
+  .container,
+  .leaderboard {
+    width: 100%;
+  }
+
+  .container {
+    margin-top: 5rem;
+  }
+
+  .total-wrapper {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}

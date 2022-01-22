@@ -1,0 +1,88 @@
+nav {
+  min-height: 100vh;
+  min-width: 12px;
+  width: 200px;
+  background-color: var(--dashboardBg);
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  transition: all 1s ease-in-out;
+}
+
+nav.animatedNav {
+  animation: changeWidth 1s forwards linear;
+  transition: all 1s ease-in-out;
+}
+
+nav > img {
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+ul {
+  margin-top: 5rem;
+  list-style: none;
+  width: 100%;
+}
+
+li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+li img {
+  width: 20px;
+  margin-right: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  font-weight: lighter;
+}
+
+.admin {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.admin img {
+  width: 100%;
+}
+
+.img-wrapper {
+  margin-left: -20px;
+  height: 50px;
+  width: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+@keyframes changeWidth {
+  from {
+    width: 10px;
+  }
+
+  to {
+    width: 200px;
+  }
+}
