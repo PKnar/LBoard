@@ -11,7 +11,12 @@ const Info = () => {
         <span>Stack: </span> React, Node, MongoDB
       </p>
       <p>
-        <span>Github Link: </span>https://github.com/PKnar/LBoard
+        <span>
+          Github:{" "}
+          <a href="https://github.com/PKnar/LBoard" target="_blank">
+            Link
+          </a>
+        </span>
       </p>
     </div>
   );
